@@ -13,6 +13,6 @@ But, none of them was like the one I used to draw during my math studies with pe
 
 So, I decided to create a snippet of my own. And, here is the result!
 
-![vectos-example-png](https://raw.githubusercontent.com/cansucullu/recipes/master/vectors/vectors-example.png)
+![vectos-example.png](https://raw.githubusercontent.com/cansucullu/recipes/master/vectors/vectors-example.png)
 
 I have tried to make it as customizable as possible. I hope you enjoy and make use of it. Feel free to take it further.
