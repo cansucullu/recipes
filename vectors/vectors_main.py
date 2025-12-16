@@ -48,9 +48,16 @@ def draw_vector(vectors, texts=None, savefig=False, name="vectors-example"):
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
+    arrowprops = {
+        "arrowstyle":"<|-|>",
+        "color":COLOR1,
+        "shrinkA":0,
+        "shrinkB":0
+    }
+
     for a, b in [(LIMIT, 0), (0, LIMIT)]:
-        ax.annotate("", xy=(-a, -b), xycoords="data", xytext=(a, b), textcoords="data",
-                    arrowprops=dict(arrowstyle="<|-|>", color=COLOR1, shrinkA=0, shrinkB=0))
+        ax.annotate("", xy=(-a, -b), xycoords="data", xytext=(a, b),
+                    textcoords="data", arrowprops=arrowprops)
 
     ax.set_xlim(-LIMIT, LIMIT)
     ax.set_ylim(-LIMIT, LIMIT)
