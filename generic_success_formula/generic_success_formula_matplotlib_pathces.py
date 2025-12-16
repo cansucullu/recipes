@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.patches import Ellipse, Circle
+from matplotlib.patches import Ellipse
 
 fig = plt.figure(1, figsize=(6.4 * 1.6, 4.8), facecolor='gray')
 print(fig.get_size_inches())
