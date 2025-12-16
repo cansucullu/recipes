@@ -96,9 +96,7 @@ def draw_vector(vectors, texts=None, savefig=False,
     if savefig:
         plt.savefig(f"{name}.png", dpi=300)
 
-    plt.draw()
     plt.show()
-    plt.gcf().clear()
 
 
 if __name__ == '__main__':
