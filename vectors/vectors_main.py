@@ -65,7 +65,7 @@ def draw_vector(vectors, texts=None, savefig=False,
 
     #  Set line ticks except the center point
     ticks = np.linspace(-LIMIT+1, LIMIT-1, 2*LIMIT-1)
-    ticklabels = [" " if i in [0] else "{:g}".format(i) for i in ticks]
+    ticklabels = [" " if i in [0] else f"{i:g}" for i in ticks]
     ax.set_xticks(ticks)
     ax.set_yticks(ticks)
     ax.set_xticklabels(ticklabels, rotation=0, color=COLOR1)
@@ -94,7 +94,7 @@ def draw_vector(vectors, texts=None, savefig=False,
               color=["#1e3799", "#e55039", "#218c74"], zorder=10)
 
     if savefig:
-        plt.savefig("{}.png".format(name), dpi=300)
+        plt.savefig(f"{name}.png", dpi=300)
 
     plt.draw()
     plt.show()
