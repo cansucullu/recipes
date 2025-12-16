@@ -8,7 +8,8 @@ LIMIT = 7
 COLOR1 = "#57606f"  # Axis lines color
 COLOR2 = "#ececec"  # Grid lines color
 
-def draw_vector(vectors, texts=None, savefig=False, name="vectors-example"):
+def draw_vector(vectors, texts=None, savefig=False,
+                name="vectors-example"):
     """
     Draw vectors.
 
@@ -76,10 +77,14 @@ def draw_vector(vectors, texts=None, savefig=False, name="vectors-example"):
     ax.grid(color=COLOR2, linestyle="dashed")
 
     #  Name coordinate system ends
-    ax.text(0, LIMIT+1, texts[0], ha="center", va="center", color="#8e44ad", weight="bold")
-    ax.text(0, -(LIMIT+1), texts[1], ha="center", va="center", color="#e74c3c")
-    ax.text(LIMIT+1, 0, texts[2], ha="center", va="center", color="#f1c40f")
-    ax.text(-(LIMIT+1), 0, texts[3], ha="center", va="center", color="#f1c40f")
+    ax.text(0, LIMIT+1, texts[0], ha="center", va="center",
+            color="#8e44ad", weight="bold")
+    ax.text(0, -(LIMIT+1), texts[1], ha="center", va="center",
+            color="#e74c3c")
+    ax.text(LIMIT+1, 0, texts[2], ha="center", va="center",
+            color="#f1c40f")
+    ax.text(-(LIMIT+1), 0, texts[3], ha="center", va="center",
+            color="#f1c40f")
 
     #  Draw vectors using matplotlib's quiver objects
     vectors = np.array(vectors)
