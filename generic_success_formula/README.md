@@ -7,3 +7,9 @@ https://medium.com/@cansucullu.
 **The visual:**
 
 ![generic-success-formula-rgb.png](https://raw.githubusercontent.com/cansucullu/recipes/master/generic_success_formula/generic-success-formula-rgb.png)
+
+
+**Credits:**
+
+The code is influenced by the solution provided at
+https://stackoverflow.com/questions/9230389/why-is-matplotlib-plotting-my-circles-as-ovals.
