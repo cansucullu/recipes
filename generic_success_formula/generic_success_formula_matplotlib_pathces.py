@@ -1,3 +1,7 @@
+"""
+The code for creating an image of 3 circles with symbols in between.
+The current version is a top-level code and does not use any functions.
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Ellipse
