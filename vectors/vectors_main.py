@@ -1,3 +1,6 @@
+"""
+Python code snippet to draw vectors using Matplotblib
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -14,6 +17,28 @@ TEXTS = [
 
 
 def draw_vector(vectors, texts=TEXTS, savefig=False, name="vectors-example"):
+    """
+    Brew a potion using selected ingredients and heat.
+
+    Parameters
+    ----------
+    vectors : list of list of int
+        A list of vectors in the following format
+        [vector_1, vector_2, ...], where vector_i is
+        [x_start, y_start, x_end, y_end]
+    texts : list of str
+        A list of strings which are used as endpoint labels in the x-y
+        axes. The order is top, bottom, left, right. Default is
+        ["North", "South", "West", "East"]
+    savefig : bool
+        Boolean flag to save the fig, default is False
+    name : str
+        Name of the file when saved. Redundant if savefig=False.
+
+    Returns
+    -------
+    None
+    """
     fig = plt.figure(1)
     ax = fig.add_subplot(111)
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
