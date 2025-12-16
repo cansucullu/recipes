@@ -80,8 +80,10 @@ def draw_vector(vectors, texts=TEXTS, savefig=False, name="vectors-example"):
 
     #  Draw vectors using matplotlib's quiver objects
     vectors = np.array(vectors)
-    X, Y, U, V = zip(*vectors)
-    ax.quiver(X, Y, U, V, angles="xy", scale_units="xy", scale=1, width=0.01, color=["#1e3799", "#e55039", "#218c74"], zorder=10)
+    x_start, y_start, x_end, y_end = zip(*vectors)
+    ax.quiver(x_start, y_start, x_end, y_end, angles="xy",
+              scale_units="xy", scale=1, width=0.01,
+              color=["#1e3799", "#e55039", "#218c74"], zorder=10)
 
     if savefig:
         plt.savefig("{}.png".format(name), dpi=300)
