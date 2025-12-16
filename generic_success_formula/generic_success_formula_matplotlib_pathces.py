@@ -7,7 +7,6 @@ import numpy as np
 from matplotlib.patches import Ellipse
 
 fig = plt.figure(1, figsize=(6.4 * 1.6, 4.8), facecolor='gray')
-print(fig.get_size_inches())
 ax = fig.add_subplot(111)
 fig.subplots_adjust(left=0.01, bottom=0.01, right=1-0.01, top=1-0.01)
 
@@ -31,13 +30,17 @@ maxd = max(dx, dy)
 width = maxd / dx
 height = maxd / dy
 
-# Location and size settings for circles
-X1 = 0.2  # X is for x axis location of center
+# Locations of circles
+X1 = 0.2
 X2 = 0.5
 X3 = 0.8
-S1 = 0.2  # S is for scale
+
+# Scales of circles
+S1 = 0.2
 S2 = 0.2
 S3 = 0.2
+
+# Edgecolor of circles
 C1 = "#4daf4a"
 C2 = "#e41a1c"
 C3 = "#377eb8"
@@ -66,6 +69,6 @@ ax.text(X3, 0.5, "Success", size=18, color=C3, ha="center", va="center",
 ax.add_artist(Ellipse((X3, 0.5), width * S3, height * S3,
                       edgecolor=C3+"FF", facecolor="white"))
 
-fig.savefig("generic-success-formula-rgb.png", dpi=300)
-plt.draw()
 plt.show()
+
+fig.savefig("generic-success-formula-rgb.png", dpi=300)
