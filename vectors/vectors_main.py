@@ -8,17 +8,9 @@ LIMIT = 7
 COLOR1 = "#57606f"  # Axis lines color
 COLOR2 = "#ececec"  # Grid lines color
 
-TEXTS = [
-    "North",
-    "South",
-    "West",
-    "East",
-]
-
-
-def draw_vector(vectors, texts=TEXTS, savefig=False, name="vectors-example"):
+def draw_vector(vectors, texts=None, savefig=False, name="vectors-example"):
     """
-    Brew a potion using selected ingredients and heat.
+    Draw vectors.
 
     Parameters
     ----------
@@ -39,6 +31,10 @@ def draw_vector(vectors, texts=TEXTS, savefig=False, name="vectors-example"):
     -------
     None
     """
+    texts = texts or []
+    if len(texts) == 0:
+        texts = ["North", "South", "West", "East"]
+
     fig = plt.figure(1)
     ax = fig.add_subplot(111)
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
